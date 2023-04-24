@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" media=""screen">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>View BBC topic - bookmarklet</title>
+  </head>
+  <body>
+    <div class="centerDiv">
+      <h1>Bookmarklet: BBC topic page viewer</h1>
+      <p>
+        <strong>Drag</strong> the link below into your browser’s
+        <strong>bookmarks bar</strong>.
+      </p>
+      <a
+        href='javascript:(function () {     const services = {       "am: ": "amharic",       "ar: ": "arabic",       "az: ": "azeri",       "bn: ": "bengali",       "en: ": "news",       "en-gb: ": "news",       "es: ": "mundo",       "fa: ": "persian",       "fr: ": "afrique",       "gu: ": "gujarati",       "ha: ": "hausa",       "hi: ": "hindi",       "id: ": "indonesia",       "ja: ": "japanese",       "ko: ": "korean",       "ky: ": "kyrgyz",       "mr: ": "marathi",       "my: ": "burmese",       "ne: ": "nepali",       "om: ": "afaanoromoo",       "pa: ": "punjabi",       "pcm: ": "pidgin",       "ps: ": "pashto",       "pt-br: ": "portuguese",       "ru: ": "russian",       "rw: ": "gahuza",       "si: ": "sinhala",       "so: ": "somali",       "sr-cyrl: ": "serbian/cyr",       "sr-latn: ": "serbian/lat",       "sw: ": "swahili",       "ta: ": "tamil",       "te: ": "telugu",       "th: ": "thai",       "ti: ": "tigrinya",       "tr: ": "turkce",       "uk: ": "ukrainian",       "ur: ": "urdu",       "uz-cyrl: ": "uzbek",       "vi: ": "vietnamese",       "yo: ": "yoruba",       "zh-hans: ": "zhongwen/simp",       "zh-hant: ": "zhongwen/trad",     }; if (services[window.getSelection().anchorNode.textContent]) {   const tagId = window.getSelection().anchorNode.baseURI.slice(29);   window.open(     `https://www.bbc.com/${       services[window.getSelection().anchorNode.textContent]     }/topics/${tagId}`,     "_blank"   ); } else {     alert("Select a language to find the relevant topic page!") } })()'
+        >BBC topic page</a
+      >
+      <p>
+        This bookmarlet allows easy access to a BBC topic curation when the tag
+        is accessed from its relevant
+        <a class="simpleLink" href="https://bbc.co.uk/things"
+          >bbc.co.uk/things</a
+        >
+        page.
+      </p>
+      <p>
+        Select a language (such as <strong>en-gb</strong>, <strong>es</strong>,
+        <strong>pt-br</strong> etc) and then click the bookmarklet to open the
+        topic curation in a separate tab.
+      </p>
+    </div>
+  </body>
+</html>
